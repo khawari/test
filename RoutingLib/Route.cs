@@ -27,14 +27,5 @@ namespace Routing
             Remove(node);
             InsertRange(index, route);
         }
-
-        /// <summary>
-        /// Checks for circular dependency.
-        /// </summary>
-        public void CheckForCircularReference()
-        {
-            if (this.GroupBy(i => i).Any(g => g.Count() > 1))
-                throw new System.Exception("Circular dependency detected");
-        }
     }
 }

@@ -38,6 +38,8 @@ namespace Routing
                     tails.Add(new Route(r));
                 else heads.Add(new Route(r));
             });
+            if (heads.Any() == false)
+                throw new Exception("Circular dependency detected");
             if (tails.Any())
             {
                 var subHeads = FindHeads(tails);
