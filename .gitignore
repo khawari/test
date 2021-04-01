@@ -4,3 +4,10 @@
 
 /Routing/bin/Debug/netcoreapp3.1
 /Routing/obj/Debug/netcoreapp3.1
+/AnalyzerModule/obj
+/RoutingLib/bin/Debug/netcoreapp3.1
+/RoutingLib/obj/Debug/netcoreapp3.1
+/RoutingLib/obj
+/RoutingLibTests/bin/Debug/netcoreapp3.1
+/RoutingLibTests/obj/Debug/netcoreapp3.1
+/RoutingLibTests/obj
