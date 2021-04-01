@@ -28,6 +28,17 @@ namespace Routing.Tests
             Assert.AreEqual(result[1], "4");
             Assert.AreEqual(result[2], "5 -> 6");
         }
+        [TestMethod()]
+        public void ProcessTestHappyPathScenario3()
+        {
+            var analyzer = new RouteAnalyzer();
+            var result = analyzer.Process(new string[] { "8 -> 9", "1 -> 3", "3 -> 4", "2 -> 3", "6 -> 7" }).ToList();
+            Assert.IsTrue(result.Count() == 4);
+            Assert.AreEqual(result[0], "8 -> 9");
+            Assert.AreEqual(result[1], "1 -> 3 -> 4");
+            Assert.AreEqual(result[2], "2 -> 3 -> 4");
+            Assert.AreEqual(result[3], "6 -> 7");
+        }
 
         [TestMethod()]
         [ExpectedException(typeof(Exception), "invalid route.")]
